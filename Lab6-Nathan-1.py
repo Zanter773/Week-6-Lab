@@ -9,3 +9,11 @@ data = {"Nbrooks": "verysecurepass",
         "Mars": "starrynight",
         "Neptune": "blueorbital",
         }
+
+username = input("What is your username? \n")
+
+if username in data:
+    print("true")
+    password = input("What is your password? \n")
+    if password in data[username]:
+        print("true")
