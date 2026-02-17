@@ -13,7 +13,14 @@ data = {"Nbrooks": "verysecurepass",
 username = input("What is your username? \n")
 
 if username in data:
-    print("true")
     password = input("What is your password? \n")
     if password in data[username]:
-        print("true")
+        print(f'Welcome, {username}.')
+        if username == 'guest':
+            print("You have Guest access.")
+        else:
+            print("You have Security Level 1.")
+    else:
+        print("Incorrect Password. Exiting.")
+else:
+    print("User not found. Exiting.")
