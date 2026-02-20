@@ -28,5 +28,7 @@ if username in userInfo:
         else:
             attempts -= 1
             print(f"Incorrect Password. {attempts} attempt(s) remaining.")
+            if attempts == 0:
+                print("Too many incorrect passwords. Account Locked.")
 else:
     print("User not found. Exiting.")
