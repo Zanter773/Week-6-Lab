@@ -26,7 +26,7 @@ if username in userInfo:
                 print("You have Security Level 1.")
                 attempts = 0
         else:
-            print(f"Incorrect Password. {attempts - 1} attempt(s) remaining.")
             attempts -= 1
+            print(f"Incorrect Password. {attempts} attempt(s) remaining.")
 else:
     print("User not found. Exiting.")
