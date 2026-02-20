@@ -21,11 +21,12 @@ if username in userInfo:
             print(f'Welcome, {username}.')
             if username == 'guest':
                 print("You have Guest access.")
+                attempts = 0
             else:
                 print("You have Security Level 1.")
+                attempts = 0
         else:
-            print("Incorrect Password.")
+            print(f"Incorrect Password. {attempts - 1} attempt(s) remaining.")
             attempts -= 1
-    print("You have been locked out.")
 else:
     print("User not found. Exiting.")
